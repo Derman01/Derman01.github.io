@@ -6,8 +6,9 @@ $(document).ready(function () {
     });
     $('.header__link').click(function (e) {
         if (!$('.header').hasClass('activ')){
-            $(".header").toggleClass('active');     
+            $(".header").toggleClass('active');  
         }
+        $('body').toggleClass('lock'); 
     });
 });
 
