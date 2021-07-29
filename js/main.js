@@ -2,6 +2,7 @@ $(document).ready(function () {
 
     $(".header__burger").click(function (e) {
         $(".header").toggleClass('active');
+        $('body').toggleClass('lock');
     });
     $('.header__link').click(function (e) {
         if (!$('.header').hasClass('activ')){

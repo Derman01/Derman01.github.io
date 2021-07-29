@@ -9,6 +9,10 @@ body {
   font-family: 'Gilroy-Medium';
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 img {
   max-width: 100%;
 }
