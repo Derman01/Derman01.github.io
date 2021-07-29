@@ -40,7 +40,7 @@ $gray-3: #F6F6F6;
     &__link {
         color: $grey;
         font-size: 1em;
-        &_activ{
+        &.activ{
             color: black;
         }
         &:hover{
