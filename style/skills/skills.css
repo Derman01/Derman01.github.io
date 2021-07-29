@@ -1,0 +1,74 @@
+.skills__body {
+  padding-top: 90px;
+  padding-bottom: 110px;
+}
+
+@media screen and (max-width: 500px) {
+  .skills__body {
+    padding-top: 83px;
+  }
+}
+
+.skills__description {
+  margin: 0 auto;
+  margin-top: 70px;
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .skills__description {
+    margin-top: 50px;
+  }
+}
+
+.skills__programs {
+  margin-top: 83px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: space-between;
+  justify-items: center;
+  row-gap: 80px;
+  column-gap: 40px;
+}
+
+@media screen and (max-width: 800px) {
+  .skills__programs {
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-evenly;
+    margin-top: 70px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .skills__programs {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+
+.program__img {
+  width: 100%;
+  text-align: center;
+  height: 90px;
+}
+
+.program__title {
+  margin: 0 auto;
+  margin-top: 24px;
+  max-width: 90px;
+  font-size: 14px;
+  font-family: 'Gilroy-Bold';
+  text-align: center;
+  color: #828282;
+}
+
+.program__raiting {
+  margin-top: 40px;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 9px;
+}
+
+.program__raiting .star.grey svg path {
+  fill: #E5E5E5 !important;
+}
+/*# sourceMappingURL=skills.css.map */

@@ -1,0 +1,227 @@
+$grey: #828282;
+$gray-2: #E5E5E5;
+$gray-3: #F6F6F6;
+
+.header {
+    font-weight: bold;
+    width: 100%;
+    position: fixed;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+    }
+
+    &__body {
+        position: relative;
+        height: 88px;
+        border-bottom: 1px solid $grey;
+        display: flex;
+        align-items: center;
+    }
+
+    &__menu {
+        width: 100%;
+    }
+
+    &__list {
+        display: grid;
+        height: 100%;
+        grid-template-columns: repeat(5, auto);
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__link {
+        color: $grey;
+        font-size: 1em;
+        &_activ{
+            color: black;
+        }
+        &:hover{
+            color: black;
+        }
+    }
+
+    .logo{display: none;}
+}
+
+@media screen and (max-width: 700px) {
+    .header {
+        &::before{ background: transparent;}
+
+		&__menu {
+           position: fixed;
+           height: 100%;
+           width: 100%;
+           left: 0;
+           top: -100%;
+           background: white;
+           font-size: 34px;
+           transition: top 0.5s;
+
+           .logo{
+               display: block;
+               position: absolute;
+               bottom: 60px;
+               right: 28px;
+               writing-mode: tb-rl;
+           }
+		}
+
+        &__list {
+            display: block;
+            padding-left: 26px;
+            padding-top: 66px;
+            li + li{
+                margin-top: 68px;
+            }
+		}
+
+        &__body {border: none;}
+
+		&__burger {
+            display: block;
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            
+            top: 66px;
+            right: 0;
+            z-index: 10;
+
+            span{                
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: black;
+
+                &+span{
+                    margin-top: 12px;
+                }
+                &:nth-child(1){
+                    animation: ease 0.5s top-back forwards;
+                }
+                &:nth-child(2){
+                    animation: ease 0.5s scale-back forwards;
+                }
+                &:nth-child(3){
+                    animation: ease 0.5s middle-back forwards;
+                }
+            }
+		}
+
+        &.active {
+            .header__menu{
+                top: 0;
+            }
+            .header__burger span{
+                &:nth-child(1){
+                    animation: ease 0.5s top forwards;
+                }
+                &:nth-child(2){
+                    animation: ease 0.5s scale forwards;
+                }
+                &:nth-child(3){
+                    animation: ease 0.5s middle forwards;
+                }
+            }
+        }
+    }
+}
+
+
+$top: 15px;
+@keyframes top {
+    0%{
+        top: 0;
+        transform: rotate(0);
+    }
+    50%{
+        top: $top;
+        transform: rotate(0);
+    }
+    100%{
+        
+        top: $top;
+        transform: rotate(45deg );
+    }
+}
+@keyframes top-back {
+    0%{        
+        top: $top;
+        transform: rotate(45deg);
+    }
+    50%{
+        top: $top;
+        transform: rotate(0);
+    }
+    100%{        
+        top: 0;
+        transform: rotate(0);
+    }
+}
+
+@keyframes scale {
+    0%{      
+        transform: scale(1);
+    }
+    50%{        
+        transform: scale(1);
+    }
+    51%{
+        transform: scale(0);
+    }
+    100%{        
+        transform: scale(0);
+    }
+}
+@keyframes scale-back {
+    0%{      
+        transform: scale(0);
+    }
+    50%{        
+        transform: scale(0);
+    }
+    51%{
+        transform: scale(1);
+    }
+    100%{        
+        transform: scale(1);
+    }
+}
+
+@keyframes middle {
+    0%{      
+        top: 0;
+        transform: rotate(0);
+    }
+    50%{        
+        top: -$top;
+        transform: rotate(0);
+    }
+    100%{        
+        top: -$top;
+        transform: rotate(-45deg);
+    }
+}
+@keyframes middle-back {
+    0%{
+        top: -$top;
+        transform: rotate(-45deg);
+    }
+    50%{
+        top: -$top;
+        transform: rotate(0);
+    }
+    100%{
+        top: 0;
+        transform: rotate(0);
+    }
+}

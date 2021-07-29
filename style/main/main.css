@@ -1,0 +1,46 @@
+@import url("../null.css");
+@import url("../fontstyle.css");
+@import url("../header/header.css");
+@import url("../home/home.css");
+@import url("../about/about.css");
+@import url("../skills/skills.css");
+html,
+body {
+  font-family: 'Gilroy-Medium';
+}
+
+img {
+  max-width: 100%;
+}
+
+.title {
+  font-family: 'Gilroy-Bold';
+  text-align: center;
+}
+
+.logo {
+  font-family: 'Gilroy-Bold';
+}
+
+.logo span {
+  color: #828282;
+}
+
+.container {
+  box-sizing: content-box;
+  max-width: 943px;
+  height: 100%;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.content {
+  padding-top: 88px;
+}
+
+@media screen and (max-width: 700px) {
+  .content {
+    padding-top: 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */

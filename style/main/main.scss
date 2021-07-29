@@ -1,0 +1,47 @@
+$grey: #828282;
+$gray-2: #E5E5E5;
+$gray-3: #F6F6F6;
+
+@import url('../null.css');
+@import url('../fontstyle.css');
+
+html,
+body{
+    font-family: 'Gilroy-Medium';
+}
+
+img{
+    max-width: 100%;
+}
+
+.title{
+    font-family: 'Gilroy-Bold';
+    text-align: center;
+}
+
+.logo{
+    font-family: 'Gilroy-Bold';
+}
+.logo span{
+    color: $grey;
+}
+
+.container {
+    box-sizing:content-box;
+    max-width: 943px;
+    height: 100%;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.content{
+    padding-top: 88px;
+    @media screen and (max-width: 700px) {
+        padding-top: 0;        
+    }
+}
+
+@import url('../header/header.css');
+@import url('../home/home.css');
+@import url('../about/about.css');
+@import url('../skills/skills.css');
