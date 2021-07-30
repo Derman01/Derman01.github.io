@@ -6,6 +6,7 @@ $gray-3: #F6F6F6;
     font-weight: bold;
     width: 100%;
     position: fixed;
+    z-index: 100;
 
     &::before{
         content: '';

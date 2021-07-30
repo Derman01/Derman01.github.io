@@ -28,11 +28,6 @@ img {
 .title {
   font-family: 'Gilroy-Bold';
   text-align: center;
-  transition: all 0.5s;
-}
-
-.title:hover {
-  transform: scale(2);
 }
 
 .logo {
