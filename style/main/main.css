@@ -5,9 +5,15 @@
 @import url("../about/about.css");
 @import url("../skills/skills.css");
 @import url("../portfolio/portfolio.css");
+@import url("../contacts/contacts.css");
 html,
 body {
   font-family: 'Gilroy-Medium';
+}
+
+.wrapper {
+  min-height: 100%;
+  display: grid;
 }
 
 body.lock {
