@@ -4,6 +4,7 @@
 @import url("../home/home.css");
 @import url("../about/about.css");
 @import url("../skills/skills.css");
+@import url("../portfolio/portfolio.css");
 html,
 body {
   font-family: 'Gilroy-Medium';

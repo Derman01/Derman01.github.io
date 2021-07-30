@@ -1,0 +1,41 @@
+.portfolio {
+
+    background: #F6F6F6;
+    &__body {
+        padding-top: 113px;
+        padding-bottom: 96px;
+
+        @media screen and (max-width: 700px) {
+            padding-top: 81px;
+            padding-bottom: 81px
+        }
+    }
+
+    &__blocks {
+        margin-top: 47px;
+        @media screen and (max-width: 700px) {
+            margin-top: 65px;
+        }
+    }
+
+    &__block {        
+        text-align: center;
+        &+.portfolio__block{
+            margin-top: 100px;
+            @media screen and (max-width: 700px) {
+                margin-top: 78px;
+            }
+        }
+        &_title {
+            font-family: 'Gilroy-Medium', sans-serif;
+            font-size: 18px;
+            margin-top: 45px;
+            color: #070707;
+            line-height: 22px;
+            text-decoration-line: underline;
+            @media screen and (max-width: 700px) {
+                margin-top: 35px;
+            }
+        }
+    }
+}
