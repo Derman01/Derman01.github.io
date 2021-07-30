@@ -34,8 +34,7 @@ function scrollMenu(){
 
     for (const section of $('section')) {
         var sectionTop = $(section).offset().top;
-        if (sectionTop - headerHeight <= windowTop + 1
-            &&)
+        if (sectionTop - headerHeight <= windowTop + 1)
             changeCurrentLink($(section));
     }
     
