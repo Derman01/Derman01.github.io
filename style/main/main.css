@@ -6,6 +6,7 @@
 @import url("../skills/skills.css");
 @import url("../portfolio/portfolio.css");
 @import url("../contacts/contacts.css");
+@import url("../popup/popup.css");
 html,
 body {
   font-family: 'Gilroy-Medium';
@@ -27,6 +28,11 @@ img {
 .title {
   font-family: 'Gilroy-Bold';
   text-align: center;
+  transition: all 0.5s;
+}
+
+.title:hover {
+  transform: scale(2);
 }
 
 .logo {

@@ -10,7 +10,36 @@ $(document).ready(function () {
     }
 
     $(window).on('scroll', scrollMenu);
+
+    $('img').click(popupOpen);
+
+    $('*').each(function() {
+        if ($(this).css('background') != null){
+            console.log($(this).css('background').indexOf('url'));
+        }
+    });
 });
+
+function popupOpen(){
+    console.log('open');
+    var src = $(this).attr('src');
+    $('body').append(
+        "<div class='popup'>" +
+        "<div class='container'>" +
+            '<div class="popup__body">' +
+                '<img class="popup__img" src="'+ src +'" alt="">' +
+            '</div>'+
+        '</div>' +
+    '</div>');
+
+    $('.popup').fadeIn(500);
+    $('.popup').click(()=>{
+        $('.popup').fadeOut(500);
+        setTimeout(()=>{
+            $('.popup').remove();
+        }, 500);
+    });
+}
 
 function isMobile(){
     return $(window).width() <= 700;
@@ -34,7 +63,7 @@ function scrollMenu(){
 
     for (const section of $('section')) {
         var sectionTop = $(section).offset().top;
-        if (sectionTop - headerHeight <= windowTop + 1)
+        if (sectionTop - headerHeight <= windowTop + 1 )
             changeCurrentLink($(section));
     }
     

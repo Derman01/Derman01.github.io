@@ -27,11 +27,18 @@ img{
 .title{
     font-family: 'Gilroy-Bold';
     text-align: center;
+
+    transition: all 0.5s;
+    &:hover{
+        transform: scale(2);
+    }
 }
 
 .logo{
     font-family: 'Gilroy-Bold';
+
 }
+
 .logo span{
     color: $grey;
 }
@@ -57,3 +64,4 @@ img{
 @import url('../skills/skills.css');
 @import url('../portfolio/portfolio.css');
 @import url('../contacts/contacts.css');
+@import url('../popup/popup.css');

@@ -1,0 +1,25 @@
+.popup {
+    top: 0;
+    left: 0;
+    height: 100%;    
+    width: 100%;
+    position: fixed;
+    background: #0009;
+    display: none;
+
+    &__body {
+        min-height: 100%;
+        width: 100%;
+        position: relative;
+    }
+    
+    &__img{
+        position: absolute;
+        max-width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+.container {
+}
