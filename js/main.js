@@ -13,15 +13,10 @@ $(document).ready(function () {
 
     $('img').click(popupOpen);
 
-    $('*').each(function() {
-        if ($(this).css('background') != null){
-            console.log($(this).css('background').indexOf('url'));
-        }
-    });
 });
 
 function popupOpen(){
-    console.log('open');
+    $('body').addClass('lock');
     var src = $(this).attr('src');
     $('body').append(
         "<div class='popup'>" +
@@ -37,6 +32,7 @@ function popupOpen(){
         $('.popup').fadeOut(500);
         setTimeout(()=>{
             $('.popup').remove();
+            $('body').removeClass('lock');
         }, 500);
     });
 }
