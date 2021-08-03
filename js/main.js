@@ -1,5 +1,6 @@
 $(document).ready(function () {   
 
+    
     if (isMobile()){
         $(".header__burger, .header__link").click(function (e) {
             $(".header").toggleClass('active');
