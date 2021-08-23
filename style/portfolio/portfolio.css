@@ -24,8 +24,8 @@
   }
 }
 
-.portfolio__block {
-  text-align: center;
+.portfolio__block_img {
+  margin: 0 auto;
 }
 
 .portfolio__block + .portfolio__block {

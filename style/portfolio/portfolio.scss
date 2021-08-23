@@ -18,8 +18,10 @@
         }
     }
 
-    &__block {        
-        text-align: center;
+    &__block {
+        &_img{
+            margin: 0 auto;
+        }
         &+.portfolio__block{
             margin-top: 100px;
             @media screen and (max-width: 700px) {
